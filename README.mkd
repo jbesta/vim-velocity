@@ -1,15 +1,47 @@
-Velocity For VIM
-================
+# Velocity for Vim
 
-Installation
--------------
+Velocity bundle for vim.
 
-Use [Pathogen](https://github.com/tpope/vim-pathogen)? If not, try to !!!
 
-    git submodule add git://github.com/lepture/vim-velocity.git ~/.vim/bundle/velocity
+## Feature
 
-Indent
-------
+1. full syntax support
+2. great indent support (by [shepherdwind](https://github.com/shepherdwind))
 
-Support velocity indent for key words `if` `foreach` `macro`. Base on 
-[htmldjango.vim](https://bitbucket.org/sjl/dotfiles/raw/e38d6bb92f91c17216bf70148c34d01ed53803ce/vim/bundle/django-custom/indent/htmldjango.vim)
+## Installation
+
+### Install with [Vundle](https://github.com/gmarik/vundle)
+
+If you are not using vundle, you really should have a try.
+Edit your vimrc:
+
+    Bundle "lepture/vim-velocity"
+
+And install it:
+
+    :so ~/.vimrc
+    :BundleInstall
+
+
+### Install with [pathogen](https://github.com/tpope/vim-pathogen)
+
+If you prefer tpope's pathogen, that's ok. Just clone it:
+
+    cd ~/.vim/bundle
+    git clone https://github.com/lepture/vim-velocity.git
+
+
+## Configuration
+
+No configuration is needed, if you are using vim 7.2+, it will detect if
+a html file is a velocity template.
+
+But if you want to ensure it works well, you can edit your vimrc:
+
+```vim
+au BufNewFile,BufRead *.vm,*.html,*.htm,*.shtml,*.stm set ft=velocity
+```
+
+## Bug report
+
+Report a bug on [GitHub Issues](https://github.com/shepherdwind/vim-velocity/issues).
