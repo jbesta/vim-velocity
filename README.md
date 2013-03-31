@@ -15,7 +15,7 @@ Velocity bundle for vim.
 If you are not using vundle, you really should have a try.
 Edit your vimrc:
 
-    Bundle "lepture/vim-velocity"
+    Bundle "shepherdwind/vim-velocity"
 
 And install it:
 
@@ -41,6 +41,7 @@ But if you want to ensure it works well, you can edit your vimrc:
 ```vim
 au BufNewFile,BufRead *.vm,*.html,*.htm,*.shtml,*.stm set ft=velocity
 ```
+
 
 ## Bug report
 

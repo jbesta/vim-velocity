@@ -2,7 +2,7 @@
 " Language:     Velocity Template Language (VTL)
 " Maintainer:   Eward Song<eward.song@gmail.com>
 "
-" Mostly based on https://bitbucket.org/sjl/dotfiles/raw/e38d6bb92f91c17216bf70148c34d01ed53803ce/vim/bundle/django-custom/indent/htmldjango.vim
+" Mostly based on https://bitbucket.org/sjl/dotfiles/raw/tip/vim/bundle/django-custom/indent/htmldjango.vim
 "
 " To use: save as ~/.vim/indent/velocity.vim
 
@@ -10,7 +10,7 @@ if exists("b:did_indent")
     finish
 endif
 
-runtime! indent/html.vim
+runtime! indent/default-html.vim
 unlet! b:did_indent
 
 if &l:indentexpr == ''
@@ -48,7 +48,7 @@ function! GetVelocityIndent(...)
     let pnb = getline(lnum)
     let cur = getline(v:lnum)
 
-    let tagstart = '^\s*#'
+    let tagstart = '#'
 
     let blocktags = '\<\(if\|foreach\|macro\)\>'
     let midtags = '\<\(elseif\|else\)\>'
